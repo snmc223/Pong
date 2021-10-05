@@ -5,8 +5,8 @@ var ballRadius = 25;
 var halfPaddleHeight = paddleHeight/2;
 var speedOfPaddle1 = 0;
 var speedOfPaddle2 = 0;
-var positionOfPaddle1 = 220;
-var positionOfPaddle2 = 220;
+var positionOfPaddle1 = 320;
+var positionOfPaddle2 = 320;
 var topPositionOfBall = 510;
 var leftPositionOfBall = 820;
 var topSpeedOfBall = 10;
@@ -54,14 +54,29 @@ document.addEventListener('keyup', function(event){
 })
 
 window.setInterval(function show() {
+
     positionOfPaddle1 += speedOfPaddle1;
     positionOfPaddle2 += speedOfPaddle2;
-
+    // Stop paddle from leaving top of screen
     if(positionOfPaddle1 <= 1) {
         positionOfPaddle1 = 1;
+    }
+
+    if(positionOfPaddle2 <= 1) {
+        positionOfPaddle2 = 1;
+    }
+    // Stop paddle from leaving bottom of screen
+    if(positionOfPaddle1 >= window.innerHeight - paddleHeight){
+        positionOfPaddle1 = window.innerHeight - paddleHeight
+    }
+
+    if(positionOfPaddle2 >= window.innerHeight - paddleHeight){
+        positionOfPaddle2 = window.innerHeight - paddleHeight
     }
 
     document.getElementById('paddle1').style.top = positionOfPaddle1 + 'px';
     document.getElementById('paddle2').style.top = positionOfPaddle2 + 'px';
 
 }, 1000/60)
+
+
