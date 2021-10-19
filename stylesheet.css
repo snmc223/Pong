@@ -13,7 +13,7 @@ body {
  .container {
      margin: 50px;
      border: 2px solid rgb(230, 75, 75);
-     padding: 50px;
+     padding: 75px;
  }
  .inner {
     position: inherit;
