@@ -15,28 +15,43 @@ body {
      border: 2px solid rgb(230, 75, 75);
      padding: 50px;
  }
+ .inner {
+    position: inherit;
+    display: flex;
+    width: 100px;
+    height: 100px;
+    background: green;
+    margin: 10px auto;
+    vertical-align: middle;
+    top: 50%;
+    left: 50%;
+    
+ }
  #paddle1 {
      position: absolute;
-     margin: 0 25px;
+     display: inline-block;
+     margin: 0 auto;
      right: 0px;
-     top: 460px;
+     top: 50%;
      width: 30px;
      height: 150px;
      background-color: rgb(40, 149, 221);
  }
  #paddle2 {
     position: absolute;
-    margin: 0 25px;
+    display: inline-block;
+    margin: 0 auto;
     left: 0px;
-    top: 460px;
+    top: 50%;
     width: 30px;
     height: 150px;
     background-color: rgb(40, 149, 221);
 }
 #ball {
     position: absolute;
+    display: inline-block;
     left: 820px;
-    top: 510px;
+    top: 50%;
     width: 25px;
     height: 25px;
     background-color: rgb(230, 75, 75);
