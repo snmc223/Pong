@@ -1,4 +1,4 @@
-// const div = document.getElementById("pong");
+const div = document.getElementById("pong");
 var paddleHeight = 150;
 var paddleWidth = 30;
 var ballRadius = 25;
@@ -78,5 +78,4 @@ window.setInterval(function show() {
     document.getElementById('paddle2').style.top = positionOfPaddle2 + 'px';
 
 }, 1000/60)
-
 
